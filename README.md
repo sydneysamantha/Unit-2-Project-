@@ -4,7 +4,8 @@
 
 A honey pot is a decoy system made to look like a real vulnerability, set up to lure attackers into interacting with it.
 
-**Executive Summary:** This exercise walked through configuring and testing SSH access, logging, and firewall rules on a Windows Server. Different methods of logging in result in different logon types, which is useful for identifying how a user or attacker is accessing a system. The firewall rule initially did not work as expected. Through multiple tests and troubleshooting, it was revealed tha this was the result of the firewall being disabled by default settings on all profiles (Domain, Private, and Public), even though the rule itself was configured correctly.
+## Executive Summary 
+This exercise walked through configuring and testing SSH access, logging, and firewall rules on a Windows Server. Different methods of logging in result in different logon types, which is useful for identifying how a user or attacker is accessing a system. The firewall rule initially did not work as expected. Through multiple tests and troubleshooting, it was revealed tha this was the result of the firewall being disabled by default settings on all profiles (Domain, Private, and Public), even though the rule itself was configured correctly.
 
 After enabling the firewall profiles, retesting confirmed that SSH login attempts from the specific IP address were successfully blocked.
 
