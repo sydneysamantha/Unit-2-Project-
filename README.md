@@ -2,13 +2,13 @@
 
 **Scope:** This document walks through configuring a honeypot, simulating connection attempts, monitoring the logs, and creating a firewall rule to block the attacker.
 
+A honey pot is a decoy system made to look like a real vulnerability, set up to lure attackers into interacting with it.
+
 **Executive Summary:** This exercise walked through configuring and testing SSH access, logging, and firewall rules on a Windows Server. Different methods of logging in result in different logon types, which is useful for identifying how a user or attacker is accessing a system. The firewall rule initially did not work as expected. Through multiple tests and troubleshooting, it was revealed tha this was the result of the firewall being disabled by default settings on all profiles (Domain, Private, and Public), even though the rule itself was configured correctly.
 
 After enabling the firewall profiles, retesting confirmed that SSH login attempts from the specific IP address were successfully blocked.
 
 These findings highlight how attackers can gain access to systems and what to look for when investigating an attack, as well as how to quickly identify and fix vulnerabilities before they can be exploited. Had the firewall rule not been tested after creation, the system could have remained open to attacks since none of the firewall profiles were enabled by default. This underscores the importance of checking default settings and confirming they aren't overriding rules that configured correctly. 
-
-A honeypot is a decoy system made to look like a real vulnerability, set up to lure attackers into interacting with it.
 
 **Prerequisites**
 - Windows machine (Server or Windows 10/11) with admin access
